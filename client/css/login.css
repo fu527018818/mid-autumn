@@ -1,0 +1,97 @@
+.content {
+  padding-top: 5.333333rem;
+  background-image: url("../images/login/loginBg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%; }
+
+.loginBox {
+  width: 7.066667rem;
+  margin: 0 auto 0;
+  text-align: center; }
+  .loginBox .mobileCode, .loginBox .verificationCode {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background-color: #ffffff;
+    padding: 0.400000rem 2.600000rem 0.400000rem 1.360000rem;
+    border-radius: 0.600000rem; }
+  .loginBox .ipt {
+    display: block;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border: none;
+    outline: 0;
+    background: none;
+    letter-spacing: 0px;
+    height: 0.400000rem;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 0.400000rem;
+    font-size: 0.320000rem; }
+
+.verificationCode {
+  position: relative;
+  height: 1.200000rem;
+  overflow: hidden; }
+  .verificationCode .getCode {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    right: 0.746667rem;
+    font-size: 0.346667rem;
+    font-family: PingFang-SC-Medium;
+    font-weight: 500;
+    color: #fbe17b; }
+  .verificationCode .iconImg {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    left: 0.666667rem;
+    width: 0.466667rem;
+    height: 0.466667rem; }
+
+.mobileCode {
+  margin-bottom: 0.480000rem;
+  overflow: hidden;
+  height: 1.200000rem;
+  position: relative; }
+  .mobileCode .iconImg {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    left: 0.666667rem;
+    width: 0.466667rem;
+    height: 0.466667rem; }
+
+.drawBtn {
+  margin: 1.120000rem auto 0;
+  cursor: pointer; }
+
+::-webkit-input-placeholder {
+  font-size: 0.320000rem;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  color: #a1a1a1; }
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  font-size: 0.320000rem;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  color: #a1a1a1; }
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  font-size: 0.320000rem;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  color: #a1a1a1; }
+
+:-ms-input-placeholder {
+  font-size: 0.320000rem;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  color: #a1a1a1; }

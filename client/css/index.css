@@ -1,0 +1,111 @@
+.content {
+  background-image: url("../images/index/indexBg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%; }
+
+.drawBox {
+  min-width: 4.666667rem;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 4.000000rem; }
+  .drawBox .integral {
+    font-size: 0.293333rem;
+    font-family: PingFang-SC-Medium;
+    font-weight: 500;
+    margin-top: 0.320000rem;
+    padding: 0  0.093333rem;
+    color: #a5a5a5; }
+    .drawBox .integral .num {
+      color: #FAAD07; }
+    .drawBox .integral > div:nth-child(1) {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+    .drawBox .integral > div:nth-child(2) {
+      margin-top: 0.106667rem; }
+    .drawBox .integral .integration {
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1; }
+    .drawBox .integral .drawCard {
+      padding-left: 0.186667rem; }
+
+.rule {
+  width: 0.906667rem;
+  height: 1.093333rem;
+  position: absolute;
+  bottom: 6.933333rem;
+  right: 0.920000rem;
+  cursor: pointer;
+  -webkit-animation: move 1.3s ease-in-out 2.7s infinite alternate;
+          animation: move 1.3s ease-in-out 2.7s infinite alternate; }
+
+.explain .shadeCon {
+  width: 75% !important; }
+  .explain .shadeCon h4 {
+    font-size: 0.453333rem;
+    font-family: PingFang-SC-Bold;
+    font-weight: bold;
+    color: #e66604;
+    text-align: center; }
+  .explain .shadeCon .des {
+    color: #232323;
+    font-size: 0.400000rem;
+    padding-right: 0.306667rem;
+    margin-top: 0.453333rem; }
+  .explain .shadeCon .desList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    line-height: 0.640000rem; }
+    .explain .shadeCon .desList div {
+      font-weight: 400; }
+
+.drawResult .shadeCon::after {
+  content: '';
+  background-image: none !important; }
+
+.drawResult .shadeCon .drawCon {
+  text-align: center; }
+  .drawResult .shadeCon .drawCon .drawImg {
+    margin: 0 auto;
+    width: 5.773333rem;
+    height: 7.706667rem; }
+    .drawResult .shadeCon .drawCon .drawImg > img {
+      width: 100%;
+      height: 100%; }
+  .drawResult .shadeCon .drawCon .drawBtn {
+    margin: 0.920000rem 0 auto; }
+
+.getCard {
+  display: block; }
+  .getCard .appleImg {
+    width: 1.266667rem;
+    height: 1.266667rem;
+    overflow: hidden;
+    margin: 0.413333rem auto 0.520000rem; }
+    .getCard .appleImg > img {
+      width: 100%;
+      height: 100%; }
+  .getCard .getCardBtn {
+    position: fixed;
+    bottom: 2.280000rem;
+    z-index: 101;
+    width: 100%; }
+  .getCard .des {
+    font-size: 0.426667rem;
+    font-family: PingFang-SC-Bold;
+    font-weight: bold;
+    color: white;
+    text-align: center; }
+    .getCard .des > span {
+      color: #FBE17B; }
+  .getCard .drawImg {
+    width: 5.773333rem;
+    height: 7.706667rem;
+    margin: 0 auto; }
+    .getCard .drawImg > img {
+      width: 100%;
+      height: 100%; }

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../js/rem.js"></script>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/me.css">
+    <title>抽奖活动</title>
+</head>
+<body>
+ <div class="content" id="app">
+        <div class="meRecordBox">
+            <div class="meRecord">
+                <div class="meConBox">
+                    <div class="meNav" id="meNav">
+                        <div class="active" data-tab-type="0" >集卡记录</div>
+                        <div data-tab-type="1">中奖纪录</div>
+                    </div>
+                    <div class="meMainList">
+                        <div class="listBox">
+                            <!-- 中奖列表 -->
+                            <div class="meList">
+                                    <div class="meLeft">
+                                        <div class="currenList">
+                                            <h4>抽中呼伦贝尔双人秋季泳</h4>
+                                            <p>2018-09-10</p>
+                                        </div>
+                                    </div>
+                                    <div class="meRight">
+                                        <div class="lookExamine">查看</div>
+                                    </div>
+                            </div>
+                            <div class="meList">
+                                    <div class="meLeft">
+                                        <div class="currenList">
+                                            <h4>抽中呼伦贝尔双人秋季泳</h4>
+                                            <p>2018-09-10</p>
+                                        </div>
+                                    </div>
+                                    <div class="meRight">
+                                        <div class="lookExamine">查看</div>
+                                    </div>
+                            </div>
+                            <div class="meList">
+                                    <div class="meLeft">
+                                        <div class="currenList">
+                                            <h4>抽中呼伦贝尔双人秋季泳</h4>
+                                            <p>2018-09-10</p>
+                                        </div>
+                                    </div>
+                                    <div class="meRight">
+                                        <div class="lookExamine">查看</div>
+                                    </div>
+                            </div>
+                            <div class="meList">
+                                    <div class="meLeft">
+                                        <div class="currenList">
+                                            <h4>抽中呼伦贝尔双人秋季泳</h4>
+                                            <p>2018-09-10</p>
+                                        </div>
+                                    </div>
+                                    <div class="meRight">
+                                        <div class="lookExamine">查看</div>
+                                    </div>
+                            </div>
+                            <div class="meList">
+                                    <div class="meLeft">
+                                        <div class="currenList">
+                                            <h4>抽中呼伦贝尔双人秋季泳</h4>
+                                            <p>2018-09-10</p>
+                                        </div>
+                                    </div>
+                                    <div class="meRight">
+                                        <div class="lookExamine">查看</div>
+                                    </div>
+                            </div>
+                            <div class="meList">
+                                    <div class="meLeft">
+                                        <div class="currenList">
+                                            <h4>抽中呼伦贝尔双人秋季泳</h4>
+                                            <p>2018-09-10</p>
+                                        </div>
+                                    </div>
+                                    <div class="meRight">
+                                        <div class="lookExamine">查看</div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class='foot-layout'>
+                            <div class='foot-text'>
+                                <div class="loading"></div>加载中
+                            </div>
+                        </div>
+                        <!-- <div class='foot-layout'>
+                                <div class='foot-text'>
+                                 
+                                    <div> 没有更多</div>
+                                </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="shadeBox meShade">
+            <div class="shade"></div>     
+            <div class="shadeCon">
+                <div class="meShadeBox collectMain">
+                    <h4>10元现金券</h4>
+                    <p class="redeemTit">兑换码</p>
+                    <p class="redeemCode">234235235</p>
+                    <!-- 优惠券图 -->
+                    <img class="redeemImg" src="../images/index/card1.png" alt="">
+                </div>
+                <img class="close" id="close" src="../images/index/close.png" alt="关闭">
+            </div>
+        </div>
+        <!-- loading -->
+        <div class="mc_mask">
+            <div class="mc_toast">
+                <div class="mc_loading"></div>
+                <div class="mc_loading_content">
+                    加载中
+                </div>
+            </div>
+        </div>
+        <div class="navBox">
+            <div class="nav">
+                <a  href="./index.html">首页</a>
+                <a href="card.html">我的卡片</a>
+                <a href="draw.html">抽奖</a>
+                <a class="active" href="./me.html">我的</a>
+            </div>
+        </div>
+  </div>
+ <script src="../plugin/jquery.min.js"></script>
+ <script src="../js/common.js"></script>
+ <script>
+     $(function(){
+        //切换tab
+         $('#meNav > div').click(function(){
+              $('#meNav > div').removeClass('active');
+              $(this).addClass('active');
+              if($(this).data('tabType')=="0"){
+                  console.log('集卡记录')
+              }else{
+                  console.log('中奖纪录')
+              }
+         })
+         $('.lookExamine').click(function(){
+             $('.meShade').show();
+         })
+         $('.close').click(function(){
+            $('.meShade').hide();
+         })
+         //下拉加载更多
+         $('.meMainList').scroll(function(e){
+                var distance = 10; //距离
+                var $loadMore = $('.foot-layout').height(); //加载更多的额外高
+                var $boxH = $('.listBox').height() + $loadMore; //内容高度
+                var $clientH = $('.meMainList').height(); //可视区域高度
+                var $scrollTop = e.target.scrollTop;
+                if($scrollTop + $clientH >= $boxH -distance){
+                    console.log(123)
+                }
+         })
+     })
+ </script>
+</body>
+</html>

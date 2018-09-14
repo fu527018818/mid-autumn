@@ -1,0 +1,29 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.7.7",
+    "browser-sync": "^2.24.4",
+    "cssnano": "^3.10.0",
+    "gulp": "^3.9.1",
+    "gulp-filter": "^5.0.0",
+    "gulp-postcss": "^6.4.0",
+    "gulp-px2rem-plugin": "^0.4.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-watch": "^4.3.11",
+    "gulp-watch-path": "^0.1.0",
+    "node-sass": "^4.5.2",
+    "precss": "^1.4.0"
+  },
+  "dependencies": {
+    "sweetalert2": "^6.6.5"
+  }
+}

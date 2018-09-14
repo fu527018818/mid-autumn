@@ -1,0 +1,237 @@
+@import '../mixins/reset.scss';
+@import '../mixins/mixins.scss';
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow:hidden;
+    font-size: 12px;
+}
+.content{
+    width: 100%;
+    height: 100%;
+}
+.drawBtn{
+    display: inline-block;
+    width: 340px;
+    height: 78px;
+    position: relative;
+    @include bis('../images/index/indexBtn.png');
+    font-size:32px;
+    line-height: 78px;
+    text-align: center;
+    font-family:PingFang-SC-Bold;
+    font-weight:bold;
+    color:rgba(230,102,4,1);
+    position: relative;
+    cursor: pointer;
+    &::after{
+        content:'';
+        width: 151px;
+        height: 171px;
+        @include bis('../images/index/btnBg.png');;
+        @include ct;
+        right:-50px;
+    }
+}
+.navBox{
+    width:100%;
+    height:96px;
+    background-color:#1F1A63;
+    position: fixed;
+    bottom:0;
+    .nav{
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        height: 100%;
+        & a{
+            flex:1;
+            text-align: center;
+            font-size:28px;
+            font-family:PingFang-SC-Medium;
+            font-weight:500;
+            color: #FFFEFD;
+            cursor: pointer;
+        }
+        & .active{
+            color: #F9BF32;
+        }
+    }
+}
+.mc_cardBtn{
+    display: flex;
+    justify-content: space-around;
+    & >div{
+        width:250px;
+        height:76px;
+        background-color:#FBE17B;
+        border-radius:38px;
+        text-align: center;
+        line-height: 76px;
+        font-size:32px;
+        font-family:PingFang-SC-Bold;
+        font-weight:bold;
+        color:rgba(230,102,4,1);
+    }
+}
+@keyframes move{
+    from{transform:translate(0,0)}
+    to{transform:translate(0,20px)}
+}
+.shadeBox{
+    display: none;
+    .shade{
+        background-color: rgba(31,26,102,0.85);
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        z-index: 100;
+        top: 0;
+    }
+    .shadeCon{
+        width:65%;
+        position: fixed;
+        z-index: 101;
+        top:45%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        &::after{
+            content:'';
+            width: 151px;
+            height: 171px;
+            @include bis('../images/index/btnBg.png');
+            position: absolute;
+            top:-65px;
+            right:-60px;
+        }
+        .close{
+            position: absolute;
+            z-index: 101;
+            width: 60px;
+            height: 60px;
+            @include cl;
+            bottom:-105px;
+        }
+    }
+}
+.collectMain{
+    background-color: #ffffff;
+    padding:50px 0 50px 23px;
+    border-radius:10px;
+}
+
+.foot-text {
+    font-size: 26px;
+    color: #a1a1a1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .foot-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }
+  
+  .loading {
+    display: inline-block;
+    margin-right: 12px;
+    vertical-align: middle;
+    width: 14px;
+    height: 14px;
+    background: 0 0;
+    border-radius: 50%;
+    border: 2px solid #e9eaec;
+    border-color: #e9eaec #e9eaec #e9eaec #f4a738;
+    animation: btn-spin 0.6s linear;
+    animation-iteration-count: infinite;
+  }
+  
+
+  .drawShade{
+    text-align: center;
+   h3{
+    font-size:34px;
+    font-family:PingFang-SC-Bold;
+    font-weight:bold;
+    color:rgba(230,102,4,1);
+    text-align: center;
+   }
+   .des{
+    font-size:34px;
+    font-family:PingFang-SC-Bold;
+    font-weight:bold;
+    color:rgba(35,35,35,1);
+    margin:24px 0 55px;
+   }
+   .btn{
+    width:250px;
+    height:76px;
+    background:#FBE17B;
+    border-radius:38px;
+    line-height: 76px;
+    margin: 0 auto;
+    color: #E66604;
+    font-size:32px;
+    font-weight: 500;
+   }
+}
+  @keyframes btn-spin {
+    0% {
+      transform: rotate(0);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+.mc_mask{
+    .mc_toast{
+        width: 220px;
+        min-height:220px;
+        position: fixed;
+        background: rgba(17, 17, 17, 0.7);
+        border-radius:20px;
+        color: #FFFFFF;
+        left: 50%;
+        transform: translate(-50%,0);
+        top:250px;
+        z-index:101;
+    }
+    .mc_loading{
+        width:76px;
+        height:76px;
+        vertical-align: baseline;
+        background: transparent url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHBhdGggZmlsbD0ibm9uZSIgZD0iTTAgMGgxMDB2MTAwSDB6Ii8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjRTlFOUU5IiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgLTMwKSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iIzk4OTY5NyIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgzMCAxMDUuOTggNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjOUI5OTlBIiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKDYwIDc1Ljk4IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0EzQTFBMiIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSg5MCA2NSA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNBQkE5QUEiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoMTIwIDU4LjY2IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0IyQjJCMiIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgxNTAgNTQuMDIgNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjQkFCOEI5IiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKDE4MCA1MCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNDMkMwQzEiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTE1MCA0NS45OCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNDQkNCQ0IiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTEyMCA0MS4zNCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNEMkQyRDIiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTkwIDM1IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0RBREFEQSIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgtNjAgMjQuMDIgNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjRTJFMkUyIiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKC0zMCAtNS45OCA2NSkiLz48L3N2Zz4=') no-repeat;
+        background-size: 100%;
+        animation: mcLoading 1s steps(12, end) infinite;
+        margin: 50px auto 0;
+    }
+}
+.mc_loading_content{
+    text-align: center;
+    font-size: 30px;
+}
+@keyframes mcLoading{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.share{
+    position: fixed;
+    z-index: 101;
+    top: 0;
+    left: 0;
+    width: 100%;
+    & .shareImg{
+     text-align: right;
+     padding: 30px 30px 0 0;
+    }
+}

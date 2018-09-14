@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../js/rem.js"></script>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/draw.css">
+    <title>抽奖活动</title>
+</head>
+<body>
+<img src="../images/draw/tunplate.png" alt="" class="hide" id=ceshi>
+<img src="../images/draw/lottery1.png" id="lottery1" alt="" class="hide">
+<img src="../images/draw/lottery2.png" id="lottery2" alt=""  class="hide">
+<img src="../images/draw/lottery3.png" id="lottery3" alt=""  class="hide">
+<img src="../images/draw/lottery4.png" id="lottery4" alt=""  class="hide">
+<img src="../images/draw/lottery5.png" id="lottery5" alt=""  class="hide">
+<img src="../images/draw/lottery6.png" id="lottery6" alt=""  class="hide">
+<img src="../images/draw/lottery7.png" id="lottery7" alt=""  class="hide">
+<img src="../images/draw/lottery8.png" id="lottery8" alt="" class="hide">
+<div class="content">
+        <div class="turnBox">
+            <div class="cardNum">嫦娥卡<span> 2 </span>张</div>
+            <div class="turntable">
+                <div class="turnplate">
+                    <canvas id="wheelcanvas" width="422px" height="422px"></canvas>
+                    <img class="pointer" src="../images/draw/turnplate-pointer.png"/>
+                </div>
+            </div>
+        </div>
+        <div class="describeBox">
+            <div class="describe">
+                <h3>奖品设置</h3>
+                <div class="awardSet">
+                    <div>
+                        <div class="awardImg"> <img src="../images/draw/lottery7_big.png" alt=""></div>
+                        <div class="title">巴厘岛亲子游</div>
+                        <div class="reference">市场参考价</div>
+                        <div class="price">￥24000</div>
+                    </div>
+                    <div>
+                        <div class="awardImg"><img src="../images/draw/lottery1_big.png" alt=""></div>
+                        <div class="title">呼伦贝尔双人 秋季游</div>
+                        <div class="reference">市场参考价</div>
+                        <div  class="price">￥8000</div>
+                    </div>
+                    <div>
+                        <div class="awardImg"><img src="../images/draw/lottery3_big.png" alt=""></div>
+                        <div class="title">Apple Watch</div>
+                        <div class="reference">市场参考价</div>
+                        <div class="price">￥2888</div>
+                    </div>
+                </div>
+                <div class="drawListBox">
+                        <div class="meMainList">
+                                <ul class="listBox">
+                                    <li>
+                                        <img src="../images/draw/present.png" alt="">
+                                        丽江漫云居客栈<span class="numNight"> 2 </span>晚
+                                    </li>
+                                    <li>
+                                        <img src="../images/draw/present.png" alt="">
+                                        有槛现金券<span class="numNight"> ￥100 </span> <span class="des">（满300可用）</span>
+                                    </li>
+                                    <li>
+                                            <img src="../images/draw/present.png" alt="">
+                                            有槛现金券<span class="numNight"> ￥50 </span> <span class="des">（满200可用）</span>
+                                    </li>
+                                    <li>
+                                        <img src="../images/draw/present.png" alt="">
+                                        现金券<span class="numNight"> ￥10 </span>
+                                    </li>
+                                
+                                </ul>
+                                <!-- <div class='foot-layout'>
+                                        <div class='foot-text'>
+                                            <div class="loading"></div>加载中
+                                        </div>
+                                </div> -->
+                            <!-- <div class='foot-layout'>
+                                    <div class='foot-text'>
+                                        
+                                        <div> 没有更多</div>
+                                    </div>
+                            </div> -->
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="shadeBox drawShade">
+            <div class="shade"></div>     
+            <div class="shadeCon">
+                <div class="collectMain">
+                        <h3>恭喜你！抽中</h3>
+                        <p class="des">呼伦贝尔双人秋季游</p>
+                        <div class="btn">确定</div>
+                </div>
+                <img class="close" id="close" src="../images/index/close.png" alt="关闭">
+            </div>
+        </div>
+        <div class="navBox">
+            <div class="nav">
+                <a  href="./index.html">首页</a>
+                <a href="card.html">我的卡片</a>
+                <a class="active" href="draw.html">抽奖</a>
+                <a  href="./me.html">我的</a>
+            </div>
+        </div>
+  </div>
+ <script src="../plugin/jquery.min.js"></script>
+ <script src="https://cdn.bootcss.com/jquery-easing/1.1.2/jquery.easing.js"></script>
+ <script src="../plugin/jquery.rotate.js"></script>
+ <script src="../js/common.js"></script>
+ <script type="text/javascript" src="../js/turnplate.js"></script>
+<script type="text/javascript">
+ $(function(){
+    var turnplateConfig = {
+        canvasID: "wheelcanvas",
+        awardList:[],               //大转盘奖品名称
+        awardColor:"#000000",       //大转盘奖项文字颜色
+        turnplateRadius: 422,       //大转盘半径
+        outsideRadius:185,          //大转盘外圆的半径
+        insideRadius:26,            //大转盘内圆的半径
+        textRadius:155,             //大转盘奖品位置距离圆心的距离
+        startAngle:22.5,               //开始角度
+        showAwardName: true,        //是否显示奖项名字
+        showAwardImg: true,         //是否显示奖项图片
+    }
+    turnplateConfig.awardList = [
+                {
+                    title:"Apple Watch",
+                    name: "",
+                    background:"#ffffff",
+                    startAngel:315,
+                    endAngel:360,
+                    urlImg:'../images/draw/lottery8.png',
+                    id:'lottery8'
+                },
+                {
+                    title:"有槛现金卷",
+                    name:"",
+                    background:"#4c9ddb",
+                    startAngel:270,
+                    endAngel:315,
+                    urlImg:'../images/draw/lottery7.png',
+                    id:"lottery7"        
+                },
+                {
+                    title:"呼伦贝尔秋季游",
+                    name:'',
+                    background:"#ffffff",
+                    startAngel:225,
+                    endAngel:270,
+                    urlImg:'../images/draw/lottery6.png',
+                    id:"lottery6"
+                },
+                {
+                    title: "积分",
+                    name: "",
+                    background:"#4c9ddb",
+                    startAngel:180,
+                    endAngel:225,
+                    id:'lottery5',
+                    urlImg:'../images/draw/lottery5.png',    
+                },
+                {
+                    title: "巴黎亲子游",
+                    name: "",
+                    background:"#ffffff",
+                    startAngel:135,
+                    endAngel:180,
+                    id:"lottery4",
+                    urlImg:'../images/draw/lottery4.png',
+                },
+                {
+                    title: "现金券",
+                    name: "",
+                    background:"#4c9ddb",
+                    startAngel:90,
+                    endAngel:135,
+                    id:'lottery3',
+                    urlImg:'../images/draw/lottery3.png',
+                },
+                {
+                    title: "丽江曼云居家客栈",
+                    name:"",
+                    background:"#ffffff",
+                    startAngel:45,
+                    id:'lottery2',
+                    endAngel:90,
+                    urlImg:'../images/draw/lottery2.png',
+                },
+                {
+                    title: "有槛现金",
+                    name: "",
+                    background:"#4c9ddb",
+                    urlImg:'../images/draw/lottery1.png',
+                    startAngel:0,
+                    endAngel:45,
+                    id:"lottery1"
+                }];
+            window.onload = function() {
+                var turnplate1 = new Turnplate(turnplateConfig);
+            turnplate1.init();  
+            var isRotate = null;
+            $('.pointer').click(function (){
+
+
+                if(isRotate){
+                    return 
+                }
+                isRotate = true;
+                turnplate1.rotateFn(turnplateConfig.awardList[2],function(){
+                    isRotate = false;
+                    // $('.drawShade').show();
+                    alert(turnplateConfig.awardList[2].title)
+                });
+
+
+            });
+        };
+       
+        // $('#close').click(function(){
+        //     $('.drawShade').hide();
+        // })
+             //下拉加载更多
+        $('.meMainList').scroll(function(e){
+                var distance = 10; //距离
+                var $loadMore = $('.foot-layout').height(); //加载更多的额外高
+                var $boxH = $('.listBox').height() + $loadMore; //内容高度
+                var $clientH = $('.meMainList').height(); //可视区域高度
+                var $scrollTop = e.target.scrollTop;
+                if($scrollTop + $clientH >= $boxH -distance){
+                    console.log(123)
+                }
+         })
+
+        
+ })
+   
+</script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+@import '../mixins/mixins.scss';
+.content{
+    @include bis('../images/card/meCardBg.png');
+}
+.cardResultBox{
+    padding-top:35px;
+    position: relative;
+    .cardBg{
+        width: 438px;
+        height: 584px;
+        @include bis('../images/card/card.png');
+        margin: 0 auto;
+    }
+    .cardNum{
+        text-align: center;
+        font-size:28px;
+        font-family:PingFang-SC-Medium;
+        font-weight:500;
+        margin-top:58px;
+        color:rgba(251,225,123,1);
+        & > span{
+            color: #E66604;
+        }
+    }
+    .generate{
+        width: 132px;
+        height: 132px;
+        @include cl;
+        bottom:60px;
+    }
+}
+.drawCard{
+    margin: 42px 0;
+    display: flex;
+    justify-content:space-around;
+    padding: 0 20px;
+    align-items: center;
+    & >div{
+        width: 115px;
+        min-height: 155px;
+        &>div{
+            display: inline-block;
+            width: 100%;
+            height: 155px;
+            position: relative;
+            &::before{
+                content:'';
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                background-color: rgba(0,0,0,0.45);
+            }
+        }
+        & img{
+            width: 100%;
+            height: 100%;
+        }
+        & p{
+            font-size:24px;
+            font-family:PingFang-SC-Medium;
+            font-weight:500;
+            color:#A5A5A5;
+            text-align: center;
+            line-height: 50px;
+        }
+    }
+    .isCard{
+        & > div::before{
+            background-color: transparent;
+        }
+        & >p{
+            color: #FBE17B;
+        }
+    }
+    .active{
+        & >div{
+            border: 2px solid #FBE17B;
+        }
+    }
+    .cardNum{
+        width: 32px;
+        height: 32px;
+        background:rgba(251,225,123,1);
+        border-radius:50%;
+        position: absolute;
+        right:-16px;
+        top:-16px;
+        font-size:22px;
+        font-family:PingFang-SC-Medium;
+        font-weight:500;
+        color:rgba(230,101,4,1);
+        text-align: center;
+    }
+}
+
+.record{
+    width:68px;
+    height: 82px;
+    position: absolute;
+    top:128px;
+    right:69px;
+    cursor: pointer;
+    animation: move 1.3s ease-in-out 2.7s infinite alternate;
+}
+
+.collectCards{
+    .shadeCon{
+        h4{
+            font-size:34px;
+            font-family:PingFang-SC-Bold;
+            font-weight:bold;
+            color:rgba(230,102,4,1);
+            text-align: center;
+        }
+        .ruleBox{
+            margin-top:30px;
+            h5{
+                font-size:30px;
+                font-family:PingFang-SC-Bold;
+                font-weight:bold;
+                color:#232323;
+                &::before{
+                    content:'* ';
+                    color: #E66604;
+                }
+            }
+            .des{
+                font-size:26px;
+                font-family:PingFang-SC-Medium;
+                font-weight:500;
+                color:#666666;
+                margin-top: 10px;
+            }
+        }
+    }
+}

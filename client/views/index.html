@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../js/rem.js"></script>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <title>抽奖活动</title>
+</head>
+<body>
+<div class="content" id="app">
+        <div class="drawBox">
+            <div class="drawBtn">
+                立刻抽卡
+            </div>
+            <div class="integral">
+                <div>
+                    <div class="integration"> 积分 <span class="num">1212</span></div>
+                    <div class="drawCard"> 兔积分抽卡次数 <span class="num">212</span></div>
+                </div>
+                <div>
+                    兔兔卡片总数 <span class="num">1212</span>
+                </div> 
+            </div>
+        </div>
+        <img id="rule" class="rule" src="../images/index/rule.png" alt="规则">
+        <div class="navBox">
+            <div class="nav">
+                <a class="active"  href="./index.html">首页</a>
+                <a href="card.html">我的卡片</a>
+                <a href="draw.html">抽奖</a>
+                <a  href="./me.html">我的</a>
+            </div>
+        </div>
+        <div class="shadeBox explain">
+            <div class="shade"></div>     
+            <div class="shadeCon">
+                <div class="collectMain">
+                    <h4>集卡锦囊</h4>
+                    <div class="des">
+                        <div class="desList">
+                            <div>1、</div>
+                            <div>本次活动为集卡活动换抽奖机会。</div>
+                        </div>
+                        <div class="desList">
+                            <div>2、</div>
+                            <div>每个用户可以免费获得2次抽奖机会</div>
+                        </div>
+                        <div class="desList">
+                                <div>3、</div>
+                                <div>每个用户每天可免费获得2次抽卡
+                                        机会，之后每次抽卡需要消耗10积
+                                        分。赠卡和讨卡还可以获得积分， 
+                                        详情参考《召唤宝典》</div>
+                        </div>
+                        <div class="desList">
+                                <div>4、</div>
+                                <div>
+                                        活动时间为2018年9月22日00：
+                                        00-10月06日23：59。
+                                      
+                                </div>
+                        </div>
+                        <div class="desList">
+                                <div>5、</div>
+                                <div> 兑奖时间为2018年10月08日10：
+                                        00-10月31日18：00（节假日和公
+                                        休日无法兑换）</div>
+                        </div>
+                        <div class="desList">
+                                <div>6、</div>
+                                <div>旅行类奖品使用期限：截止到2018
+                                        年12月31日。门店现金券使用期限 
+                                        ：截止到2018年10月31日。</div>
+                        </div>
+                        <div class="desList">
+                                <div>7、</div>
+                                <div>兑换流程和其他咨询，请拨打
+                                        400-8836-400客服热线。</div>
+                        </div>
+                        <div class="desList">
+                                <div>8、</div>
+                                <div>本活动最终解释权归图途所有。</div>
+                        </div>
+                    </div>
+                </div>
+                <img class="close" id="close" src="../images/index/close.png" alt="关闭">
+            </div>
+        </div>
+        <div class="shadeBox drawResult">
+                <div class="shade"></div>     
+                <div class="shadeCon">
+                    <div class="drawCon">
+                            <div class="drawImg">
+                                <img src="../images/index/card1.png" alt="冰皮兔">
+                            </div>
+                            <div class="drawBtn" id="drawResult">
+                                    立刻领取
+                            </div>
+                    </div>
+                </div>
+        </div>
+        <!-- 赠与卡片，于得到卡片-->
+        <div class="shadeBox getCard">
+                <div class="shade"></div>     
+                <div class="shadeCon">
+                        <div class="drawCon">
+                                <div class="drawImg">
+                                    <img src="../images/index/card1.png" alt="冰皮兔">
+                                </div>
+                                <div class="appleImg">
+                                    <img  src="../images/index/apple.png" alt="苹果">
+                                </div>
+                                <div class="des">
+                                        好肥一只鱼送你<span>双月兔卡</span>
+                                </div>
+                        </div> 
+                </div>
+                <div class="getCardBtn">
+                    <div class="mc_cardBtn">
+                            <div id="cardFeed">接受</div>
+                            <div id="noReject">不接受</div>
+                    </div> 
+                </div>
+                
+        </div>
+  </div>
+ <script src="../plugin/jquery.min.js"></script>
+<script src="../js/common.js"></script>
+ <script>
+$(function(){
+    $('.getCard').show();
+
+        //召唤宝典
+        $('#rule').click(function(){
+            $('.explain').show();
+        })
+        $('.close').click(function(){
+            $('.explain').hide();
+        })
+
+        //中奖结果页
+        $('.drawBtn').click(function(){
+                $('.drawResult').show();
+        })
+        $('.drawResult').click(function(){
+            // $('.drawResult').hide();
+        })
+        //接受
+        $('#cardFeed').click(function(){
+
+        })
+        //不接受
+        $('#noReject').click(function(){
+            $('.getCard').hide()
+        })
+})
+ </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+$globalGradient:linear-gradient(-90deg, 
+#0dcfff 0%, 
+#4198ff 100%), 
+linear-gradient(
+#f8bb49, 
+#f8bb49);
+$globalColor: #4198ff;  
+$globalRed: #ff6a4c; 
+$globalOrange:#fab32f;
+$globalGreen:#414b41;
+
+$globalBlack:#4c4c4c; 
+$globalMain:#808080; 
+$globalCut:#d9d9d9;
+$globalbg:#edf0f2;
+$navHoverColor:#3987e6;
+$white: #ffffff;
+$blue: #409FFE;
+$pink: #DA067A;
+$green: #8CB633;
+$purple: #9C3FCF;
+$red:#ff6040;
+$yellow:#ffaa00;
+
+
+$fc-1: #4c4c4c;   
+$fc-2: #808080;  
+$fc-3:#d9d9d9 ;  
+$fc-4: #f2f2f2; 
+
+
+
+@function r($px){
+    @return $px / 200 * 1 + rem;
+}
+
+$fs-1: r(60);
+$fs-2: r(34);
+$fs-3: r(30);
+$fs-4: r(26);
+$fs-5: r(20);
+
+@mixin bis($url) { 
+	background-image: url($url);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+@mixin borderRadius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin allcover{
+	position:absolute;
+	top:0;
+	right:0;
+}
+
+
+@mixin center {  
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+@mixin ct {  
+	position: absolute;
+	top: 50%;
+    transform: translateY(-50%);
+}
+
+
+@mixin cl {  
+	position: absolute;
+	left: 50%;
+    transform: translateX(-50%);
+}
+
+
+@mixin wh($width, $height){
+	width: $width;
+	height: $height;
+}
+
+@mixin font($size, $line-height, $family: 'Microsoft YaHei') {  
+	font: #{$size}/#{$line-height} $family;
+}
+
+
+@mixin sc($size, $color){
+	font-size: $size;
+	color: $color;
+}
+
+
+@mixin fj($type: space-between){
+	display: flex;
+	justify-content: $type;
+
+}
+
+@mixin btLine{
+	content:'';
+	width: 100%;
+	height: 1Px;
+	background-color: #d9d9d9;
+	position: absolute;
+	bottom:0;
+	left: 0;
+}

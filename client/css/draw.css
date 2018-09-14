@@ -1,0 +1,152 @@
+@charset "UTF-8";
+body, html {
+  overflow-y: auto !important; }
+
+.content {
+  background-image: url("../images/me/meCardBg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: auto;
+  padding-bottom: 2.000000rem; }
+
+.hide {
+  display: none; }
+
+/* 大转盘样式 */
+.turnBox {
+  padding-top: 0.960000rem; }
+  .turnBox .turntable {
+    display: block;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto; }
+  .turnBox .turntable .turnplate {
+    display: block;
+    width: 100%;
+    position: relative;
+    background-image: url(../images/draw/turnplate-bg.png);
+    background-size: 100% 100%; }
+  .turnBox .turntable .turnplate canvas {
+    width: 100%; }
+  .turnBox .turntable .turnplate img.pointer {
+    position: absolute;
+    width: 2.240000rem;
+    height: 2.733333rem;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+  .turnBox .cardNum {
+    position: absolute;
+    font-size: 0.400000rem;
+    font-family: PingFang-SC-Medium;
+    font-weight: 500;
+    color: white;
+    top: 0.600000rem;
+    right: 0.373333rem;
+    z-index: 101; }
+    .turnBox .cardNum > span {
+      color: #E66604; }
+
+.describeBox {
+  width: 9.400000rem;
+  height: 11.880000rem;
+  margin: 0.746667rem auto 0;
+  background-image: url("../images/draw/draw_set.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%; }
+  .describeBox .describe {
+    padding: 0.280000rem 0.280000rem 0.560000rem;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+    .describeBox .describe h3 {
+      font-size: 0.453333rem;
+      font-family: PingFang-SC-Bold;
+      font-weight: bold;
+      color: #e66604;
+      text-align: center;
+      margin: 0.320000rem 0 0; }
+    .describeBox .describe .awardSet {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      padding: 0  0.266667rem 0.266667rem;
+      text-align: center;
+      -webkit-box-sizing: border-box !important;
+              box-sizing: border-box !important;
+      position: relative; }
+      .describeBox .describe .awardSet::after {
+        content: '';
+        width: 92%;
+        height: 1px;
+        background-color: #FDF0BC;
+        position: absolute;
+        bottom: 0px; }
+      .describeBox .describe .awardSet > div {
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1; }
+        .describeBox .describe .awardSet > div .awardImg:nth-child(1) {
+          height: 2.226667rem;
+          width: 100%;
+          text-align: center; }
+          .describeBox .describe .awardSet > div .awardImg:nth-child(1) > img {
+            width: 1.800000rem; }
+        .describeBox .describe .awardSet > div .awardImg:nth-child(2) {
+          height: 2.226667rem;
+          width: 100%;
+          text-align: center; }
+          .describeBox .describe .awardSet > div .awardImg:nth-child(2) > img {
+            width: 1.800000rem; }
+        .describeBox .describe .awardSet > div .awardImg:nth-child(3) {
+          height: 2.226667rem;
+          width: 100%;
+          text-align: center; }
+          .describeBox .describe .awardSet > div .awardImg:nth-child(3) > img {
+            width: 100%; }
+        .describeBox .describe .awardSet > div .title {
+          font-size: 0.400000rem;
+          font-family: PingFang-SC-Bold;
+          font-weight: bold;
+          color: #232323; }
+        .describeBox .describe .awardSet > div .reference {
+          font-size: 0.320000rem;
+          font-family: PingFang-SC-Medium;
+          font-weight: 500;
+          color: #666666; }
+        .describeBox .describe .awardSet > div .price {
+          font-size: 0.320000rem;
+          font-family: PingFang-SC-Medium;
+          font-weight: 500;
+          color: #E66604; }
+
+.drawListBox {
+  padding: 0.533333rem 0.666667rem 0.533333rem; }
+  .drawListBox .meMainList {
+    height: 4.266667rem;
+    overflow-x: hidden;
+    overflow-y: auto; }
+  .drawListBox .listBox > li {
+    font-size: 0.400000rem;
+    font-family: PingFang-SC-Medium;
+    font-weight: 400;
+    color: #232323;
+    line-height: 1.066667rem;
+    position: relative;
+    padding-left: 1.093333rem; }
+    .drawListBox .listBox > li > img {
+      width: 0.706667rem;
+      height: 0.600000rem;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+      left: 0.133333rem; }
+    .drawListBox .listBox > li .numNight {
+      color: #E66504; }
+    .drawListBox .listBox > li .des {
+      color: #666666; }

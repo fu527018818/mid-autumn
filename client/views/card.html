@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../js/rem.js"></script>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/card.css">
+    <title>抽奖活动</title>
+</head>
+<body>
+ <div class="content" id="app">
+        <div class="cardResultBox">
+            <div class="cardBg"></div>
+            <img class="generate" src="../images/card/generate.png" alt="合成">
+            <div class="cardNum">嫦娥奔月卡 <span>6</span></div>
+        </div>
+        <div class="drawCard" id="drawCard">
+                <!-- isCard是否有卡片 active当前是否选中-->
+            <div class="isCard active">
+                <div>
+                    <!-- 卡片数量 -->
+                    <div class="cardNum">2</div>
+                    <img src="../images/card/card1.png" alt="">
+                </div>
+                <p>冰皮兔</p>
+            </div>
+            <div class="isCard">
+                <div>
+                    <img src="../images/card/card2.png" alt="">
+                </div>
+                <p>草莓兔</p>
+            </div>
+            <div >
+                <div>
+                    <img src="../images/card/card3.png" alt="">
+                </div>
+                <p>可可兔</p>
+            </div>
+            <div >
+                <div>
+                        <img src="../images/card/card4.png" alt="">
+                </div>
+                <p>抹茶兔</p>
+            </div>
+            <div >
+                <div>
+                    <img src="../images/card/card5.png" alt="">
+                </div>
+                <p>双月兔</p>
+            </div>
+        </div>
+        <div class="shadeBox drawShade">
+                <div class="shade"></div>     
+                <div class="shadeCon">
+                    <div class="collectMain">
+                            <h3>恭喜你！</h3>
+                            <p class="des">呼伦贝尔双人秋季游</p>
+                            <div class="btn">确定</div>
+                    </div>
+                    <img class="close" id="close" src="../images/index/close.png" alt="关闭">
+                </div>
+        </div>
+        <div class="mc_cardBtn">
+                <div id="cardFeed">送卡</div>
+                <div id="getCard">讨卡</div>
+        </div>
+        <div class="navBox">
+            <div class="nav">
+                <a  href="./index.html">首页</a>
+                <a class="active" href="card.html">我的卡片</a>
+                <a  href="draw.html">抽奖</a>
+                <a  href="./me.html">我的</a>
+            </div>
+        </div>
+        <img id="record" class="record" src="../images/card/record.png" alt="规则">
+    <div class="shadeBox collectCards">
+        <div class="shade"></div>     
+            <div class="shadeCon">
+                <div class="collectMain">
+                    <h4>集卡锦囊</h4>
+                        <div class="ruleBox">
+                        <h5>重复的兔兔卡可以赠与好</h5>
+                        <p class="des">好友成功领取，你和TA抽卡机会+1（每日最多3次）</p>
+                        </div>
+                        <div class="ruleBox">
+                        <h5>重复的兔兔卡可以赠与好</h5>
+                        <p class="des">好友成功领取，你和TA抽卡机会+1（每日最多3次）</p>
+                    </div>
+                    <div class="ruleBox">
+                        <h5>重复的兔兔卡可以赠与好</h5>
+                        <p class="des">好友成功领取，你和TA抽卡机会+1（每日最多3次）</p>
+                    </div>
+                </div>
+                <img class="close" id="close" src="../images/index/close.png" alt="关闭">
+        </div>
+    </div>
+    <div class="shareCard shadeBox">
+        <div class="shade"></div>
+        <div class="share">
+            <div class="shareImg">
+                <img src="../images/card/shareCard.png" alt="">
+            </div>
+        </div>  
+    </div>
+  </div>
+ <script src="../plugin/jquery.min.js"></script>
+ <script src="../js/common.js"></script>
+ <script>
+    $(function(){
+        //合成
+        $('.generate').click(function(){
+            console.log(123)
+        })
+        // 送卡
+        $('#cardFeed').click(function(){
+
+        })
+        //讨卡
+        $('#getCard').click(function(){
+
+        })
+        //记录
+        $('#record').click(function(){
+            $('.collectCards').show();
+        })
+        //当前选中卡片
+        $('#drawCard > div').click(function(){
+              $('#drawCard > div').removeClass('active');
+              $(this).addClass('active')
+        })
+        // 中奖显示 遮罩
+        // $('.drawShade').show()
+        // 分享卡片
+        //
+         $('.shareCard').show();
+    })
+    
+ </script>
+</body>
+</html>

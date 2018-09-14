@@ -1,0 +1,169 @@
+@import '../mixins/mixins.scss';
+body,html{
+    overflow-y: auto!important;
+}
+.content{
+    @include bis('../images/me/meCardBg.png');
+    height: auto;
+    padding-bottom: 150px;
+}
+.hide{
+	display: none;
+}
+/* 大转盘样式 */
+.turnBox{
+    padding-top:72px;
+    .turntable{
+        display:block;
+        width:95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .turntable .turnplate{
+        display:block;
+        width:100%;
+        position:relative;
+        background-image:url(../images/draw/turnplate-bg.png);
+        background-size:100% 100%;
+    }
+    .turntable .turnplate canvas{
+        width:100%;
+    }
+    .turntable .turnplate img.pointer{
+        position:absolute;
+        width: 168px;
+        height: 205px;
+        left: 50%;
+        top:50%;
+        transform:translate(-50%,-50%);
+    }
+    .cardNum{
+        position:absolute;
+        font-size:30px;
+        font-family:PingFang-SC-Medium;
+        font-weight:500;
+        color:rgba(255,255,255,1);
+        top: 45px;
+        right:28px;
+        z-index: 101;
+        &>span{
+            color: #E66604;
+        }
+    }  
+}
+.describeBox{
+    width: 705px;
+    height: 891px;
+    margin: 56px auto 0;
+    
+    @include bis('../images/draw/draw_set.png');
+    & .describe{
+        padding:21px 21px 42px;
+        height: 100%;
+        box-sizing: border-box;
+        h3{
+            font-size:34px;
+            font-family:PingFang-SC-Bold;
+            font-weight:bold;
+            color:rgba(230,102,4,1);
+            text-align: center;
+            margin: 24px 0 0;
+        }
+        .awardSet{
+            display: flex;
+            justify-content: center;
+            padding: 0 20px 20px;
+            text-align:center;
+            box-sizing: border-box!important;
+            position: relative;
+           &::after{
+               content: '';
+               width: 92%;
+               height: 1px;
+               background-color: #FDF0BC;
+               position: absolute;
+               bottom: 0px;
+           }
+            & >div{
+                flex: 1; 
+                .awardImg:nth-child(1){
+                    height:167px;
+                    width: 100%;
+                    text-align: center;
+                    & > img{
+                  
+                       width: 135px;
+                    }
+                }
+                .awardImg:nth-child(2){
+                    height:167px;
+                   width: 100%;
+                   text-align: center;
+                    & > img{
+                        
+                        width: 135px;
+                  
+                    }
+                }
+                .awardImg:nth-child(3){
+                    height:167px;
+                    width: 100%;
+                    text-align: center;
+                    & > img{
+                     
+                        width: 100%;
+                    }
+                }
+                .title{
+                    font-size:30px;
+                    font-family:PingFang-SC-Bold;
+                    font-weight:bold;
+                    color:rgba(35,35,35,1);
+                }
+                .reference{
+                    font-size:24px;
+                    font-family:PingFang-SC-Medium;
+                    font-weight:500;
+                    color:#666666;
+                }
+                .price{
+                    font-size:24px;
+                    font-family:PingFang-SC-Medium;
+                    font-weight:500;
+                    color:#E66604;
+                }
+            }
+        }
+    }
+}
+.drawListBox{
+    padding: 40px 50px 40px;
+    .meMainList{
+        height:320px;
+        overflow-x:hidden;
+        overflow-y: auto;
+    }
+    .listBox{
+        & > li{
+            font-size:30px;
+            font-family:PingFang-SC-Medium;
+            font-weight:400;
+            color:rgba(35,35,35,1);
+            line-height:80px;
+            position: relative;
+            padding-left: 82px;
+            & > img{
+                width:53px;
+                height:45px;
+                @include ct;
+                left:10px;
+            }
+            &  .numNight{
+              color: #E66504;  
+            }
+            & .des{
+                color: #666666;
+            }
+        }
+    }
+}

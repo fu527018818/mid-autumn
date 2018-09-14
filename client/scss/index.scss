@@ -1,0 +1,134 @@
+@import '../mixins/mixins.scss';
+
+.content{
+    @include bis('../images/index/indexBg.png');
+}
+.drawBox{
+    min-width: 350px;
+    @include cl;
+    bottom: 300px;
+    .integral{
+        font-size:22px;
+        font-family:PingFang-SC-Medium;
+        font-weight:500;
+        margin-top: 24px;
+        padding: 0 7px;
+        color:rgba(165,165,165,1);
+        & .num{
+            color: #FAAD07;
+        }
+        &>div:nth-child(1){
+            display: flex;
+        }
+        &>div:nth-child(2){
+            margin-top: 8px;
+        }
+        .integration{
+            flex:1;
+        }
+        .drawCard{
+            padding-left: 14px;
+        }
+    }
+}
+.rule{
+    width:68px;
+    height: 82px;
+    position: absolute;
+    bottom: 520px;
+    right:69px;
+    cursor: pointer;
+    animation: move 1.3s ease-in-out 2.7s infinite alternate;
+}
+.explain{
+    .shadeCon{
+        width: 75%!important;
+        h4{
+            font-size:34px;
+            font-family:PingFang-SC-Bold;
+            font-weight:bold;
+            color:rgba(230,102,4,1);
+            text-align: center;
+        }
+        .des{
+            color: #232323;
+            font-size: 30px;
+            padding-right: 23px;
+            margin-top: 34px;
+           
+        }
+       .desList{
+           display:flex;
+           line-height: 48px;
+         & div{
+            font-weight:400;
+         }
+       }
+    }
+}
+.drawResult{
+    .shadeCon{
+        &::after{
+            content: '';
+            background-image: none!important;
+        }
+        .drawCon{
+            text-align: center;
+            .drawImg{
+                margin: 0 auto;
+                width: 433px;
+                height:578px;
+             
+                & > img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .drawBtn{
+                margin: 69px 0 auto;
+            }
+        }
+    }
+}
+
+.getCard{
+    display: block;
+    .appleImg{
+        width:95px;
+        height: 95px; 
+        overflow: hidden;
+        margin: 31px auto 39px;
+        & > img{
+           width: 100%;
+           height: 100%;
+
+        }
+    }
+    .getCardBtn{
+        position: fixed;
+        bottom:171px;
+        z-index: 101;
+        width: 100%;
+
+    }
+    .des{
+        font-size:32px;
+        font-family:PingFang-SC-Bold;
+        font-weight:bold;
+        color:rgba(255,255,255,1);
+        text-align: center;
+        & > span{
+            color:#FBE17B;
+        }
+    }
+    .drawImg{
+        width: 433px;
+        height: 578px;
+        margin: 0 auto;
+        & > img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+

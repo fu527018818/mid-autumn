@@ -1,0 +1,121 @@
+.content {
+  background-image: url("../images/card/meCardBg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%; }
+
+.cardResultBox {
+  padding-top: 0.466667rem;
+  position: relative; }
+  .cardResultBox .cardBg {
+    width: 5.840000rem;
+    height: 7.786667rem;
+    background-image: url("../images/card/card.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin: 0 auto; }
+  .cardResultBox .cardNum {
+    text-align: center;
+    font-size: 0.373333rem;
+    font-family: PingFang-SC-Medium;
+    font-weight: 500;
+    margin-top: 0.773333rem;
+    color: #fbe17b; }
+    .cardResultBox .cardNum > span {
+      color: #E66604; }
+  .cardResultBox .generate {
+    width: 1.760000rem;
+    height: 1.760000rem;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    bottom: 0.800000rem; }
+
+.drawCard {
+  margin: 0.560000rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0  0.266667rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .drawCard > div {
+    width: 1.533333rem;
+    min-height: 2.066667rem; }
+    .drawCard > div > div {
+      display: inline-block;
+      width: 100%;
+      height: 2.066667rem;
+      position: relative; }
+      .drawCard > div > div::before {
+        content: '';
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.45); }
+    .drawCard > div img {
+      width: 100%;
+      height: 100%; }
+    .drawCard > div p {
+      font-size: 0.320000rem;
+      font-family: PingFang-SC-Medium;
+      font-weight: 500;
+      color: #A5A5A5;
+      text-align: center;
+      line-height: 0.666667rem; }
+  .drawCard .isCard > div::before {
+    background-color: transparent; }
+  .drawCard .isCard > p {
+    color: #FBE17B; }
+  .drawCard .active > div {
+    border: 2px solid #FBE17B; }
+  .drawCard .cardNum {
+    width: 0.426667rem;
+    height: 0.426667rem;
+    background: #fbe17b;
+    border-radius: 50%;
+    position: absolute;
+    right: -0.213333rem;
+    top: -0.213333rem;
+    font-size: 0.293333rem;
+    font-family: PingFang-SC-Medium;
+    font-weight: 500;
+    color: #e66504;
+    text-align: center; }
+
+.record {
+  width: 0.906667rem;
+  height: 1.093333rem;
+  position: absolute;
+  top: 1.706667rem;
+  right: 0.920000rem;
+  cursor: pointer;
+  -webkit-animation: move 1.3s ease-in-out 2.7s infinite alternate;
+          animation: move 1.3s ease-in-out 2.7s infinite alternate; }
+
+.collectCards .shadeCon h4 {
+  font-size: 0.453333rem;
+  font-family: PingFang-SC-Bold;
+  font-weight: bold;
+  color: #e66604;
+  text-align: center; }
+
+.collectCards .shadeCon .ruleBox {
+  margin-top: 0.400000rem; }
+  .collectCards .shadeCon .ruleBox h5 {
+    font-size: 0.400000rem;
+    font-family: PingFang-SC-Bold;
+    font-weight: bold;
+    color: #232323; }
+    .collectCards .shadeCon .ruleBox h5::before {
+      content: '* ';
+      color: #E66604; }
+  .collectCards .shadeCon .ruleBox .des {
+    font-size: 0.346667rem;
+    font-family: PingFang-SC-Medium;
+    font-weight: 500;
+    color: #666666;
+    margin-top: 0.133333rem; }

@@ -1,0 +1,94 @@
+@import '../mixins/mixins.scss';
+.content{
+    padding-top: 400px;
+    @include bis('../images/login/loginBg.png');
+}
+.loginBox{
+    width: 530px;
+    margin: 0 auto 0;
+    text-align: center;
+    .mobileCode,.verificationCode{
+        box-sizing: border-box;
+        background-color:#ffffff;
+        padding: 30px 195px 30px 102px;
+        border-radius:45px;
+    }
+    & .ipt{
+        display:block;
+        width: 100%;
+        box-sizing: border-box;
+        border:none;
+        outline:0;
+        background:none;
+        letter-spacing: 0px;
+        height:30px;
+        font-weight: normal;
+        font-stretch: normal;
+        line-height:30px;
+        font-size:24px;
+
+    }
+}
+.verificationCode{
+    position: relative;
+    height: 90px;
+    overflow: hidden;
+    & .getCode{
+        @include ct;
+        right:56px;
+        font-size:26px;
+        font-family:PingFang-SC-Medium;
+        font-weight:500;
+        color:rgba(251,225,123,1);
+    }
+    .iconImg{
+        @include ct;
+        left: 50px;
+        width: 35px;
+        height: 35px;
+    }
+}
+.mobileCode{
+    margin-bottom:36px;
+    overflow: hidden;
+    height: 90px;
+    position: relative;
+    .iconImg{
+        @include ct;
+        left: 50px;
+        width: 35px;
+        height: 35px;
+    }
+}
+.drawBtn{
+    margin: 84px auto 0;
+    cursor: pointer;
+}
+::-webkit-input-placeholder {
+    font-size:24px;
+font-family:PingFang-SC-Medium;
+font-weight:500;
+color:rgba(161,161,161,1);
+  }
+  :-moz-placeholder {/* Firefox 18- */
+    font-size:24px;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+    color:rgba(161,161,161,1);
+  }
+  ::-moz-placeholder{/* Firefox 19+ */
+    font-size:24px;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+    color:rgba(161,161,161,1);
+  }
+  :-ms-input-placeholder {
+    font-size:24px;
+font-family:PingFang-SC-Medium;
+font-weight:500;
+color:rgba(161,161,161,1);
+  }
+    
+    
+    
+    
